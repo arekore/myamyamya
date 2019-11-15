@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # gem 'simple_calendar', '~> 2.0'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '4.3.1'
 gem 'google-api-client', '0.9.20', require: ['google/apis/youtube_v3', 'google/apis/sheets_v4']
 gem 'trollop'
