@@ -1,0 +1,619 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+@charset "utf-8";
+@import "bootstrap";
+
+@media (min-width:781px){
+	html {
+		font-size: 62.5%;
+	}
+}
+
+
+/* ---------------------------------------------------
+	共通ヘッダー＋フッターCSS
+ -------------------------------------------------- */
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color: #C5EDFF;
+	line-height: 2;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+a {
+	color: #3583aa;
+	text-decoration: none;
+	:visited {
+		color: #788d98;
+	}
+	:hover {
+		text-decoration: underline;
+		color: #3583aa;
+	}
+}
+
+header {
+	background-color: #87CEEB;
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	@media (max-width:480px) {
+		height: 140px;
+	}
+	.header_cover {
+		display: flex;
+		align-items: center;
+		div {
+			display: inline-block;
+			p {
+				margin: 5px 5px;
+			}
+		}
+	}
+	.header_link {
+		line-height: 15px;
+	}
+	.header_banner {
+		height: 100px;
+	}
+	.global-nav {
+		margin: auto;
+		margin-top: 20px;
+		font-family: 'Arima Madurai', cursive;
+		@media (max-width:480px) {
+			display: none;
+		}
+		li {
+			float: left;
+			color: #ffffff;
+			margin: 0 30px;
+			font-size: 3em;
+			list-style: none;
+			text-shadow:1px 1px 0 #ffff80, -1px -1px 0 #ffff80,
+			-1px 1px 0 #ffff80, 1px -1px 0 #ffff80,
+			0px 1px 0 #ffff80,  0-1px 0 #ffff80,
+			  -1px 0 0 #ffff80, 1px 0 0 #ffff80;
+		}
+	}
+}
+
+.navbar {
+	font-family: 'Arima Madurai', cursive;
+	background-color: #87CEEB;
+	padding: 0 16px;
+	z-index: 3;
+	span {
+		font-size: 1.5em;
+	}
+	@media (min-width:781px) {
+		display: none;
+	}
+}
+
+.navbar-toggler {
+    padding: 0;
+    font-size: inherit;
+    border: none;
+}
+
+footer {
+	font-size: 1.2em;
+	background-color: #3583aa;
+	color: #000;
+	text-align: center;
+	line-height: 1.3em;
+	img {
+		height: 50px;
+	}
+	@media (max-width:480px) {
+		font-size: 0.5em;
+		img {
+			height: 30px;
+		}
+	}
+}
+
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+.pagetop a {
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.pagetop a:hover {
+    display: block;
+    background-color: #b2d1fb;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding:5px 10px;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+
+
+/* --------------------------------------
+	"TOP"ページCSS
+ -------------------------------------- */
+
+.top_cover {
+	position: relative;
+	text-align: center;
+	color: #000;
+	font-family: "M PLUS Rounded 1c";
+	h1 {
+		font-size: 4em;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+	p {
+		font-size: 2em;
+		margin: 0;
+		line-height: 1.5em;
+		span {
+			font-size: 0.5em;
+		}
+	}
+	.top_image {
+		margin: 15px 0;
+		text-align: center;
+		width: 70%;
+		@media (max-width:480px) {
+			width: 100%;
+		}
+	}
+	@media (max-width:480px) {
+		h1 {
+			font-size: 2.5em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	@media (min-width:781px) {
+		.xs_br {
+			display: none;
+		}
+	}
+}
+
+
+.top_contents {
+	margin: 20px auto;
+	text-align: center;
+	// アニメーション設定
+	animation-name:fade-in3;
+	animation-duration:2s; //アニメーション時間
+	animation-timing-function: ease-out; //アニメーションさせるイージング
+	animation-delay:1s; //アニメーション開始させる時間
+	animation-iteration-count:1; //繰り返し回数
+	animation-direction:normal; //往復処理をするかどうか
+	animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+	// アニメーション
+	@keyframes fade-in3 {
+	  0% {opacity: 0; transform: translate3d(0,20px,0);}
+	  100% {opacity: 1; transform: translate3d(0,0,0);}
+	}
+	@media (max-width:480px) {
+		float: none;
+		width: 100%;
+		img {
+			width: 80%;
+		}
+	}
+	div.schedule {
+		margin-bottom: 30px;
+		background-color: rgba(255,105,180,0.5);
+		border-radius: 25px;
+		font-size: 2.3em;
+		color: #000;
+		padding-bottom: 7px;
+		div.top_schedule {
+			padding: 7px 10px;
+			margin: 7px 15px;
+			background-color: rgba(61, 121, 250, 0.5);
+			border-radius: 25px;
+		}
+		h1 {
+			font-family: 'Ultra', serif;
+			font-size: 2em;
+			margin-bottom: 0;
+			@media (max-width:480px) {
+				font-size: 1.2em;
+			}
+		}
+		p {
+			font-size: 0.7em;
+			color: #000;
+			font-family: "M PLUS Rounded 1c";
+			.time {
+				font-size: 1.3em;
+			}
+		}
+		.wait {
+			font-size: 2em;
+			font-weight: bold;
+		}
+		figcaption {
+			font-family: "M PLUS Rounded 1c";
+			font-size: 0.8em;
+			line-height: 1.2em;
+			color: #000;
+		}
+	}
+}
+
+
+/* --------------------------------------
+	"Personal"ページCSS
+ -------------------------------------- */
+
+.personal_box {
+	font-family: "M PLUS Rounded 1c";
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	// アニメーション設定
+	animation-name:fade-in3;
+	animation-duration:2s; //アニメーション時間
+	animation-timing-function: ease-out; //アニメーションさせるイージング
+	animation-delay:1s; //アニメーション開始させる時間
+	animation-iteration-count:1; //繰り返し回数
+	animation-direction:normal; //往復処理をするかどうか
+	animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+	// アニメーション
+	@keyframes fade-in3 {
+	  0% {opacity: 0; transform: translate3d(0,20px,0);}
+	  100% {opacity: 1; transform: translate3d(0,0,0);}
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.literal {
+		font-size: 1.2em;
+		.intro {
+			color: Navy;
+			font-size: 4em;
+			line-height: 1.5em;
+		}
+		.intro2 {
+			color: #000;
+			font-size: 1.5em;
+		}
+		.illust {
+			color: #000;
+		}
+		iframe {
+			 width: 560px;
+			 height: 315px;
+		}
+	}
+	@media (min-width:781px) { 
+		display:flex;
+		flex-wrap:nowrap;
+		justify-content:space-between;
+		.literal{
+			margin-left:1.0em;
+		}
+		.intro {
+			font-size: 1.2em
+		}
+	}
+	@media (max-width:480px) {
+		max-width: 95%;
+		text-align: center;
+		.literal {
+			.intro {
+				font-size: 1.2em;
+			}
+			.intro2 {
+				font-size: 1em;
+			}
+		 	iframe {
+				width: 95%;
+				height: auto;
+			}
+		}
+	}
+}
+
+
+/* --------------------------------------
+	"History"ページCSS
+ -------------------------------------- */
+
+.history_div {
+	font-family: "M PLUS Rounded 1c";
+	font-size: 1.5em;
+	text-align: center;
+	color: #000;
+	max-width: 80%;
+	margin: auto;
+	padding: 20px 0;
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 20px;
+	}
+	p {
+	 font-size: 16px;
+	 font-weight: bold;
+	 text-align: center;
+	 margin: 60px auto 40px;
+   }
+   th {
+	 background: #e9727e;
+	 border: solid 1px #ccc;
+	 color: #fff;
+	 padding: 10px;
+	 font-size: 1.3em;
+   }
+   td {
+	 border: solid 1px #ccc;
+	 padding: 5px;
+	 vertical-align: middle;
+	 line-height: initial;
+   }
+   
+   @media screen and (max-width: 640px) {
+		.history_table {
+		width: 100%;
+		th {
+			display: none;
+		}
+		} 
+		.history_table .thead {
+		display: none;
+		}
+		.history_table tr,
+		.history_table td{
+		display: block;
+		width: 100%;
+		position: relative;
+		}
+		.history_table td:first-child:before {
+		background: #e9727e;
+		box-sizing: border-box;
+		color: #fff;
+		font-weight: bold;
+		height: 40px;
+		padding: 10px;
+		position: absolute;
+		top: -41px;
+		left: -0.2%;
+		display: block;
+		width: 100.5%;
+		}
+		.history_table tr {
+		margin-bottom: 40px;
+		}
+		td {
+			font-size: 0.7em;
+		}
+		img {
+			height: 20px;
+		}
+	}
+}
+
+.history_container {
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	padding: 0 auto;
+	margin-bottom: 30px;
+	.data_cell {
+		text-decoration: none;
+		.card {
+			max-width: 100%;
+			max-height: 100%;
+			border-bottom: solid 3px #ffe000;
+		}
+		a {
+			color: #000;
+			:hover {
+				text-decoration: none;
+			}
+		}
+		.card-body {
+			font-size: 1.3em;
+		}
+	}
+	.date_cell {
+		background-color: lightcoral;
+		font-size: 1.2em;
+		font-weight: 900;
+		padding: 3px;
+	}
+	.header {
+		background-color: chartreuse;
+		font-size: 2em;
+		font-weight: 900;
+	}
+}
+
+
+/* --------------------------------------
+	"Illust"ページCSS
+-------------------------------------- */
+
+.illust_page {
+	font-size: 1.5em;
+	color: #000;
+	text-align: center;
+	h1 {
+		font-family: "M PLUS Rounded 1c";
+		font-size: 3em;
+		@media (max-width:480px) {
+			font-size: 2em;
+			margin-top: 20px;
+		}
+	}
+	.row {
+		align-items: baseline;
+	}
+	.illust_cell {
+		background-color: rgba(255,105,180,0.5);
+		border-radius: 10px;
+		margin: 5px;
+		max-width: 24%;
+		padding: 15px;
+		.tw_name {
+			margin: 0;
+		}
+		.illust_img {
+			:first-child {
+				max-height: 100%;
+				max-width: 100%;
+				object-fit: cover;
+				vertical-align: middle;
+				text-align: center;
+			}
+			:nth-child(n+2) {
+				max-width: 50%;
+				max-height: 50%;
+			}
+		}
+		@media (max-width:480px) {
+			max-width: 90%;
+			font-size: 0.8em;
+			margin: 15px auto;
+			.tw_text {
+				line-height: 1.5em;
+			}
+		}
+	}
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+	#result {
+		margin: auto;
+	}
+	@media (max-width:480px) {
+		.md {
+			display: none;
+		}
+	}
+	@media (min-width:781px) {
+		.xs {
+			display: none;
+		}
+	}
+}
+
+
+/* --------------------------------------
+	"Other"ページCSS
+ -------------------------------------- */
+
+div.other_page {
+	font-family: "M PLUS Rounded 1c";
+	font-size: 1.5em;
+	text-align: center;
+	color: #000;
+	max-width: 80%;
+	margin: auto;
+	padding: 20px 0;
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 20px;
+		padding-bottom: 0.2em;
+		border-bottom: solid 2px black;
+	}
+	p {
+		font-size: 1.3em;
+	}
+	ul {
+		list-style: none;
+	}
+	td {
+		text-align: left;
+		vertical-align: middle;
+	}
+	.row {
+		margin-bottom: 20px;
+	}
+	.offcial {
+		max-width: 70%;
+	}
+	.unoffcial {
+		max-width: 70%;
+	}
+	.who_is {
+		font-size: 0.8em;
+		th.info_cell {
+			width: 100px;
+		}
+	}
+	.info_cell {
+		font-size: 0.8em;
+	}
+}
+
+
+/* --------------------------------------
+	"Special"ページCSS
+ -------------------------------------- */
+
+.special_page {
+	font-family: "M PLUS Rounded 1c";
+	font-size: 1.5em;
+	text-align: center;
+	color: #000;
+	max-width: 95%;
+	margin: auto;
+	padding: 20px 0;
+	.yose_img {
+		padding: 20px;
+		img {
+			max-width: 100%;
+			height: auto;
+			padding: 10px;
+		}
+	}
+	.pdf_icon {
+		width: 60px;
+		height: auto;
+	}
+	#modal.modal-body {
+		font-size: 1.5em;
+		color: #000;
+	}
+}

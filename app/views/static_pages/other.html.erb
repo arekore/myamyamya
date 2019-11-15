@@ -1,0 +1,75 @@
+<% provide(:title, "Other") %>
+
+<div class="other_page">
+    <h1>Link</h1>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+        <p>公式関連</p>
+        <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>YouTube Channel</th>
+                <td><%= link_to "天宮 こころ / Kokoro Amamiya 【にじさんじ所属】", "https://www.youtube.com/channel/UCkIimWZ9gBJRamKF0rmPU8w?sub_confirmation=1", :target=>["_blank"], :rel=>["noopener"] %></td>
+            </tr>
+            <tr>
+                <th>Twitter</th>
+                <td><%= link_to "天宮こころ 🎐毎日夕方配信中 🌠《にじさんじ所属》", "https://twitter.com/amamiya_kokoro", :target=>["_blank"], :rel=>["noopener"] %></td>
+            </tr>
+            <tr>
+                <th>にじさんじ公式</th>
+                <td><%= link_to "天宮こころ", "https://nijisanji.ichikara.co.jp/member/kokoro-amamiya/", :target=>["_blank"], :rel=>["noopener"] %></td>
+            </tr>
+        </table>
+        </div>
+        </div>
+
+        <div class="col-md-6">
+        <p>非公式関連</p>
+        <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>にじさんじ非公式Wiki</th>
+                <td><%= link_to "天宮こころ", "https://wikiwiki.jp/nijisanji/%E5%A4%A9%E5%AE%AE%E3%81%93%E3%81%93%E3%82%8D", :target=>["_blank"], :rel=>["noopener"] %></td>
+            </tr>
+            <tr>
+                <th>非公式Discord</th>
+                <td><%= link_to "りすみゃ～広場", "https://discord.gg/Gaqdavw", :target=>["_blank"], :rel=>["noopener"] %></td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </div><%# row %>
+
+    <h2>制作・協力</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li class="info_cell">年表編集</li>
+                <li>募</li>
+                <li>集</li>
+                <li>中</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <div class="table-responsive who_is">
+                <table class="table table-sm">
+                    <tr>
+                        <th class="info_cell">サイト制作</th>
+                        <td><%= link_to "あるか", "https://twitter.com/Atamura_", :target=>["_blank"], :rel=>["noopener"] %></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4" class="info_cell">制作環境</th>
+                        <td>Visual studio Code</td>
+                    </tr>
+                    <tr><td>Ruby on Rails</td></tr>
+                    <tr><td>YouTube Data API</td></tr>
+                    <tr><td>Google Sheets API</td></tr>
+                </table>
+            </div>
+        </div>
+
+    </div><%# row %>
+    </div><%# container %>
+</div>

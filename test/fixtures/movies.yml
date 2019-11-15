@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  thumbnail: MyString
+  video_id: MyString
+  status: MyString
+  start_time: 2019-09-11 13:41:36
+
+two:
+  title: MyString
+  thumbnail: MyString
+  video_id: MyString
+  status: MyString
+  start_time: 2019-09-11 13:41:36

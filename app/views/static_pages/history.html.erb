@@ -1,0 +1,73 @@
+<% provide(:title, "History") %>
+
+<div class="history_div">
+    <h1>あまみやの軌跡</h1>
+</div>
+
+<div class="container history_container">
+    <div class="row">
+        <div class="col header">
+            配信
+        </div>
+        <div class="col-1 date_cell header">
+            日付
+        </div>
+        <div class="col header">
+            Twitter等
+        </div>
+    </div>
+    <% @history.each do |item| %>
+    <div class="row">
+        <% if item.flag == 1 %>
+            <div class="col data_cell yt">
+                <div class="card">
+                    <div class="card-header" role="tab">
+                        <h3 class="mb-0">
+                        <a data-toggle="collapse" href="#yt_<%= item.id %>" role="button" aria-expanded="false" aria-controls="yt_<%= item.id %>">
+                            <%= item.title %>
+                        </a>
+                        </h3>
+                    </div>
+                    <% unless item.comment.empty? && item.video_id.empty? %>
+                    <div class="collapse" id="yt_<%= item.id %>" role="tabpanel">
+                        <div class="card-body">
+                            <%= item.comment %>
+                            <%= link_to image_tag('movie_icon.png'), "https://www.youtube.com/watch?v=#{item.video_id}", :target=>["_blank"], :rel=>["noopener"] %>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+            <div class="col-1 date_cell"><%= item.date.strftime("%Y年") %><br><%= item.date.strftime("%-m月%-d日") %></div>
+            <div class="col data_cell other"></div>
+        <% else %>
+            <div class="col data_cell yt"></div>
+            <div class="col-1 date_cell"><%= item.date.strftime("%Y年") %><br><%= item.date.strftime("%-m月%-d日") %></div>
+            <div class="col data_cell other">
+                <div class="card">
+                    <div class="card-header" role="tab">
+                        <h3 class="mb-0">
+                        <a data-toggle="collapse" href="#yt_<%= item.id %>" role="button" aria-expanded="false" aria-controls="yt_<%= item.id %>">
+                            <%= item.title %>
+                        </a>
+                        </h3>
+                    </div>
+                    <% unless item.comment.empty? %>
+                        <div class="collapse" id="yt_<%= item.id %>" role="tabpanel">
+                            <div class="card-body">
+                                <%= item.comment %>
+                            </div>
+                        </div>
+                    <% else %>
+                        <div class="collapse" id="yt_<%= item.id %>#" role="tabpanel">
+                            <div class="card-body">
+                                <%= item.comment %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div><%# row %>
+    <% end %>
+</div><%# container %>

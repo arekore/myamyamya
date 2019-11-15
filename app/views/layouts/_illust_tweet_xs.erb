@@ -1,0 +1,23 @@
+<% illust.each_with_index do |tweet, i| %>
+    <% if i > 31 %>
+        <% break %>
+    <% else %>
+        <div class="illust_cell">
+        <%= link_to "#{tweet.user.url}", :target=>["_blank"], :rel=>["noopener"] do %>
+            <p class="tw_name"><%= tweet.user.name %></p>
+            <p class="tw_name">@<%= tweet.user.screen_name %></p>
+        <% end %>
+        <%= link_to "#{tweet.user.url}/status/#{tweet.id}", :target=>["_blank"], :rel=>["noopener"] do %>
+            <p class="tw_text"><%= tweet.attrs[:full_text] %></p>
+            <div class="illust_img">
+                <% tweet.media.each do |itm| %>
+                    <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.user.name}", title: ""} do %>
+                       <img src=<%= "#{itm.media_url_https}" %> alt="TwitterImg">
+                    <% end %>
+                    <%#= image_tag(itm.media_url_https) %>
+                <% end %>
+            </div>
+        <% end %>
+        </div>
+   <% end %>
+<% end %>

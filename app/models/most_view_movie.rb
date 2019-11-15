@@ -1,0 +1,2 @@
+class MostViewMovie < ApplicationRecord
+end

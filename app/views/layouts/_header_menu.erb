@@ -1,0 +1,46 @@
+<header>
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="col-md-3 header_cover">
+        <%= link_to image_tag("cover_pic.png", {class: "header_banner"} ), "/" %>
+        <div class="yt_image">
+          <p><%= link_to image_tag("youtube_circle.png", height: "35px" ), "https://www.youtube.com/channel/UCkIimWZ9gBJRamKF0rmPU8w?sub_confirmation=1", :target=>["_blank"], :rel=>["noopener"] %></p>
+          <p><%= link_to image_tag("twitter_circle.png", height: "35px" ), "https://twitter.com/amamiya_kokoro", :target=>["_blank"], :rel=>["noopener"] %></p>
+        </div>
+      </div>
+      <div class="col-md-7 offset-md-1">
+        <nav>
+          <ul class="global-nav">
+            <li><%= link_to("Top", "/") %></li>
+            <li><%= link_to("about", "/about") %></li>
+            <li><%= link_to("History", "/history") %></li>
+            <li><%= link_to("Illust", "/illust") %></li>
+            <li><%= link_to("Other", "/other") %></li>
+          </ul>
+        </nav>
+      </div>
+    </div><%# row %>
+  </div><%# container-fluid %>
+
+  <%# スマホ用nav %>
+  <nav class="navbar navbar-dark">
+    <span>Amamiya Kokoro Fan</span>
+    <button class="navbar-toggler" type="button"
+        data-toggle="collapse"
+        data-target="#navmenu1"
+        aria-controls="navmenu1"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu1">
+      <div class="navbar-nav">
+        <%= link_to("Top", "/", {class: "nav-item nav-link"}) %>
+        <%= link_to("about", "/about", {class: "nav-item nav-link"}) %>
+        <%= link_to("History", "/history", {class: "nav-item nav-link"}) %>
+        <%= link_to("Illust", "/illust", {class: "nav-item nav-link"}) %>
+        <%= link_to("Other", "/other", {class: "nav-item nav-link"}) %>
+      </div>
+    </div>
+  </nav>
+</header>

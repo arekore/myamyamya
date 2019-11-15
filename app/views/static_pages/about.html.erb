@@ -1,0 +1,26 @@
+<% provide(:title, "About") %>
+
+<div class="personal_box">
+    <div class="amamiya_full_img">
+        <a href=<%= "#{@amamiya_all_url}" %> data-lightbox="fuga" data-title="全身">
+           <img src=<%= "#{@amamiya_all_url}" %> alt="全身">
+        </a><br>
+        <a href=<%= "#{@amamiya_setting_url}" %> data-lightbox="fuga" data-title="設定画">
+           <img src=<%= "#{@amamiya_setting_url}" %> alt="設定画">
+        </a>
+    </div>
+    <div class="literal">
+        <p class="intro">にじさんじ所属<br>新人バーチャルライバー<br>天宮こころで～す🎐</p>
+        <p class="intro2">「龍」と対話できる一族の巫女。<br>
+            そのためずっと箱入り娘として育てられてきたが、<br>
+            最近、一人前と認められたことで、ようやく社会と関わることを許された。<br>
+            一人前になったご褒美としてにじさんじに応募し、<br>
+            この度めでたくライバーとしてデビューすることに。
+        </p>
+        <p class="illust">
+            illust：さくらしおり(<%= link_to "@shior2", "https://twitter.com/shior2", :target=>["_blank"], :rel=>["noopener"] %>)<br>
+            Icon＆紹介文：<%= link_to "いちから株式会社", "http://nijisanji.ichikara.co.jp/member/", :target=>["_blank"], :rel=>["noopener"] %>
+        </p>
+        <iframe src="https://www.youtube.com/embed/ReL8zo9NmZs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>

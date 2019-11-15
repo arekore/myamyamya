@@ -1,0 +1,20 @@
+<% provide(:title, "Special") %>
+
+<%= render partial: "layouts/coment_ome" %>
+
+<div class="special_page">
+    <div class="yose_img">
+        <%= image_tag('test_img.jpg', :class => 'yose_main_img') %>
+        <%= image_tag('test_img.jpg', :class => 'yose_main_img') %>
+    </div>
+
+    <div id="modal">
+        <%= link_to image_tag("pdf_icon.png", :class => 'pdf_icon'), {:controller => "static_pages",:action=>"downloadpdf"}, :target=>["_blank"], data:
+            { confirm: 'PDFをダウンロードします。',
+            verify: 'Amamya5',
+            verify_text: 'ダウンロードコード「Amamya5」を入力してください。',
+            cancel: 'キャンセル',
+            commit: 'ダウンロード'}, title: 'PDFダウンロード' %>
+    </div>
+
+</div>
