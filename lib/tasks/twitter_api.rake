@@ -17,7 +17,7 @@ namespace :twitter_api do
             result_type: "recent",
             locale: "ja",
             exclude: "retweets",
-            filter: "images"
+            filter: ["images","safe"]
         )
     end
 end
