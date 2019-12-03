@@ -3,8 +3,8 @@
 にじさんじライバー天宮こころファンサイト「りすみゃ～広報」
 
 # Version
-Ruby 2.5.5
-Rails 5.1.6
+Ruby 2.5.5  
+Rails 5.1.6  
 動作想定サーバー Heroku
 
 # 簡単な内容
@@ -22,18 +22,19 @@ Rails 5.1.6
         - 表示上は「Illust」ページ。各種フィルター設定は[こちらを参照](https://gist.github.com/cucmberium/e687e88565b6a9ca7039)
 
 ## API KEYについて
-Google/TwitterのAPI利用には各サイトに申請をし、KEYを取得する必要がある。取得方法はググって。
-GoogleアカウントがあればYoutubeとSpreadsheetはそんなに難しくない。
-Twitterは利用目的の英文を書くのが非常に面倒だが、日本語文をGoogle翻訳してコピペでいける。
-KEYを書く場所は「config/secrets.yml」で書き方は[こちらを参照](https://qiita.com/biohuns/items/40c39e15804a6a28b7e1)
+Google/TwitterのAPI利用には各サイトに申請をし、KEYを取得する必要がある。取得方法はググって。  
+GoogleアカウントがあればYoutubeとSpreadsheetはそんなに難しくない。  
+Twitterは利用目的の英文を書くのが非常に面倒だが、日本語文をGoogle翻訳してコピペでいける。  
+~~KEYを書く場所は「config/secrets.yml」で書き方は[こちらを参照](https://qiita.com/biohuns/items/40c39e15804a6a28b7e1)~~  
+→[.envを使う方式に変更](https://qiita.com/uma0317/items/e142661c004f68d858a5)  
 API KEYの命名は以下
 - youtube_api_key → Spreadsheetと同じKEYを利用できる
 - twitter_api_key
 - twitter_secret_key
 
 # Herokuについて
-サーバーはHerokuの無料枠を利用している。
-クレカの登録をすると無料枠が550→1000時間になり、スリープさせることなく利用可能。
+サーバーはHerokuの無料枠を利用している。  
+クレカの登録をすると無料枠が550→1000時間になり、スリープさせることなく利用可能。  
 ※スリープすると次にアクセスがあった時に表示が非常に遅くなる。
 
 ## 利用しているAdd onについて
