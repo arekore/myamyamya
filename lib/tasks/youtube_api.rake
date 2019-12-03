@@ -2,7 +2,7 @@ namespace :youtube_api do
     desc "Update YouTube Schedule"
     task :scheduler => :environment do
 
-        DEVELOPER_KEY = Rails.application.secrets.youtube_api_key
+        DEVELOPER_KEY = ENV["YOUTUBE_KEY"]
         CHANNELID = 'UCkIimWZ9gBJRamKF0rmPU8w' #天宮channelID
 
         def get_start(video_id)

@@ -1,8 +1,8 @@
 namespace :twitter_api do
     desc "Get hashtag time line"
     task :get_tweet do
-        CONSUMER_KEY = Rails.application.secrets.twitter_api_key
-        SECRET_KEY = Rails.application.secrets.twitter_secret_key
+        CONSUMER_KEY = ENV["TWITTER_KEY"]
+        SECRET_KEY = ENV["TWITTER_SECRET"]
         query = "#絵こころ" #検索文字列
 
         client = Twitter::REST::Client.new(

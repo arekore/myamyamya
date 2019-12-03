@@ -2,7 +2,7 @@ namespace :sheets_api do
     desc "API task for Google Sheets data"
     task :update => :environment do
 
-        DEVELOPER_KEY = Rails.application.secrets.youtube_api_key
+        DEVELOPER_KEY = ENV["YOUTUBE_KEY"]
         
         spreadsheet_id = '1GokIVlJSLs8AjdhJ5P0xMt5o_6H-MAGY7Vj1ExpLlns'
         range = 'A2:E10000'
