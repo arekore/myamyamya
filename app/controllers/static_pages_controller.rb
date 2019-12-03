@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
-  CONSUMER_KEY = Rails.application.secrets.twitter_api_key
-  SECRET_KEY = Rails.application.secrets.twitter_secret_key
+  CONSUMER_KEY = ENV["TWITTER_KEY"]
+  SECRET_KEY = ENV["TWITTER_SECRET"]
 
   def home
     @schedule = Movie.all
