@@ -1,26 +1,47 @@
 <% provide(:title, "About") %>
 
-<div class="personal_box">
-    <div class="amamiya_full_img">
-        <a href=<%= "#{@amamiya_all_url}" %> data-lightbox="fuga" data-title="全身">
-           <img src=<%= "#{@amamiya_all_url}" %> alt="全身">
-        </a><br>
-        <a href=<%= "#{@amamiya_setting_url}" %> data-lightbox="fuga" data-title="設定画">
-           <img src=<%= "#{@amamiya_setting_url}" %> alt="設定画">
-        </a>
+<div class="about_page">
+    <div class="personal_box">
+        <div class="amamiya_full_img">
+            <a href=<%= "#{@amamiya_all_url}" %> data-lightbox="fuga" data-title="全身">
+            <img src=<%= "#{@amamiya_all_url}" %> alt="全身">
+            </a><br>
+            <a href=<%= "#{@amamiya_setting_url}" %> data-lightbox="fuga" data-title="設定画">
+            <img src=<%= "#{@amamiya_setting_url}" %> alt="設定画">
+            </a>
+        </div>
+        <div class="literal">
+            <h1 class="intro">みんなの心に<br>天宮こころ🎐</h1>
+            <p class="intro2">「龍」と対話できる一族の巫女。<br>
+                そのためずっと箱入り娘として育てられてきたが、<br>
+                最近、一人前と認められたことで、ようやく社会と関わることを許された。<br>
+                一人前になったご褒美としてにじさんじに応募し、<br>
+                この度めでたくライバーとしてデビューすることに。
+            </p>
+            <p class="illust">
+                illust：さくらしおり(<%= link_to "@shior2", "https://twitter.com/shior2", :target=>["_blank"], :rel=>["noopener"] %>)<br>
+                紹介文：<%= link_to "いちから株式会社", "http://nijisanji.ichikara.co.jp/member/", :target=>["_blank"], :rel=>["noopener"] %>
+            </p>
+            <iframe src="https://www.youtube.com/embed/ReL8zo9NmZs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <hr>
+            <h2 class="intro">自らにじさんじ最弱を名乗る巫女</h2>
+            <p class="intro2">
+                最弱を名乗る理由は好きなもの(にじさんじ)＝最強であるため、その中に入った自分はどのメンバーにも勝てないから。<br>
+                しかし、プニキのプレイから伺えるゲームスキルは、最弱どころか相当なハイレベル。
+            </p>
+            <h3 class="intro">天宮こころ"最弱"リスト</h3>
+            <ul class="intro2">
+                <li>初配信。待機画面から次回予告。初手マウスカーソル、「終わった…」という声、そしてどこかの先輩顎が使っているBGM</li>
+                <li>滑舌が酷すぎてセンシティブ発言になる</li>
+                <li>リズムと歌詞と音程以外完璧な「Tulip」</li>
+                <li>リングフィットアドベンチャーの初期設定時、リング押し込み・引っ張りともに「にじさんじ最弱」を記録(2019/11/11時点)</li>
+                <li>運動負荷"6"で満身創痍になり、翌日は"3"、最終的に"1"になる</li>
+            </ul>
+        </div>
     </div>
-    <div class="literal">
-        <p class="intro">にじさんじ所属<br>新人バーチャルライバー<br>天宮こころで～す🎐</p>
-        <p class="intro2">「龍」と対話できる一族の巫女。<br>
-            そのためずっと箱入り娘として育てられてきたが、<br>
-            最近、一人前と認められたことで、ようやく社会と関わることを許された。<br>
-            一人前になったご褒美としてにじさんじに応募し、<br>
-            この度めでたくライバーとしてデビューすることに。
-        </p>
-        <p class="illust">
-            illust：さくらしおり(<%= link_to "@shior2", "https://twitter.com/shior2", :target=>["_blank"], :rel=>["noopener"] %>)<br>
-            Icon＆紹介文：<%= link_to "いちから株式会社", "http://nijisanji.ichikara.co.jp/member/", :target=>["_blank"], :rel=>["noopener"] %>
-        </p>
-        <iframe src="https://www.youtube.com/embed/ReL8zo9NmZs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--
+    <div class="about2">
     </div>
+-->
 </div>

@@ -41,7 +41,7 @@ class StaticPagesController < ApplicationController
   end
 
   def downloadpdf
-    file_name = "test.pdf"
+    file_name = "amamya50000.pdf"
     filepath = Rails.root.join("public", file_name)
     stat = File::stat(filepath)
     send_file(filepath, :filename => file_name, :length => stat.size)

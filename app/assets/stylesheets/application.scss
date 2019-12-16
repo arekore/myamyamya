@@ -196,6 +196,14 @@ footer {
 			width: 100%;
 		}
 	}
+	.special_link {
+		margin-top: 15px;
+		text-align: center;
+		width: 40%;
+		@media (max-width:480px) {
+			width: 100%;
+		}
+	}
 	@media (max-width:480px) {
 		h1 {
 			font-size: 2.5em;
@@ -279,76 +287,80 @@ footer {
 
 
 /* --------------------------------------
-	"Personal"ページCSS
+	"about"ページCSS
  -------------------------------------- */
 
-.personal_box {
+ .about_page {
 	font-family: "M PLUS Rounded 1c";
 	max-width: 80%;
 	margin: 0 auto;
 	padding: 20px;
-	// アニメーション設定
-	animation-name:fade-in3;
-	animation-duration:2s; //アニメーション時間
-	animation-timing-function: ease-out; //アニメーションさせるイージング
-	animation-delay:1s; //アニメーション開始させる時間
-	animation-iteration-count:1; //繰り返し回数
-	animation-direction:normal; //往復処理をするかどうか
-	animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
-	// アニメーション
-	@keyframes fade-in3 {
-	  0% {opacity: 0; transform: translate3d(0,20px,0);}
-	  100% {opacity: 1; transform: translate3d(0,0,0);}
-	}
-	img {
-		max-width: 100%;
-		display: block;
-		margin: 0 auto;
-	}
-	
-	.literal {
-		font-size: 1.2em;
-		.intro {
-			color: Navy;
-			font-size: 4em;
-			line-height: 1.5em;
+	.personal_box {
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
 		}
-		.intro2 {
-			color: #000;
-			font-size: 1.5em;
-		}
-		.illust {
-			color: #000;
-		}
-		iframe {
-			 width: 560px;
-			 height: 315px;
-		}
-	}
-	@media (min-width:781px) { 
-		display:flex;
-		flex-wrap:nowrap;
-		justify-content:space-between;
-		.literal{
-			margin-left:1.0em;
-		}
-		.intro {
-			font-size: 1.2em
-		}
-	}
-	@media (max-width:480px) {
-		max-width: 95%;
-		text-align: center;
 		.literal {
+			font-size: 1.2em;
 			.intro {
-				font-size: 1.2em;
+				color: Navy;
+				font-size: 4em;
+				line-height: 1.4em;
 			}
 			.intro2 {
-				font-size: 1em;
+				color: #000;
+				font-size: 1.4em;
+				line-height: 1.5em;
 			}
-		 	iframe {
-				width: 95%;
-				height: auto;
+			.illust {
+				color: #000;
+			}
+			iframe {
+				width: 560px;
+				height: 315px;
+			}
+			h2.intro {
+				color: Navy;
+				font-size: 2em;
+			}
+			h3.intro {
+				color: Navy;
+				font-size: 2em;
+			}
+			ul {
+				list-style: none;
+				li {
+					padding-bottom: 15px;
+					line-height: 1.3em;
+				}
+			}
+		}
+		@media (min-width:781px) { 
+			display:flex;
+			flex-wrap:nowrap;
+			justify-content:space-between;
+			.literal{
+				margin-left:1.0em;
+			}
+			.intro {
+				font-size: 1.2em
+			}
+		}
+		@media (max-width:480px) {
+			max-width: 95%;
+			text-align: center;
+			.literal {
+				.intro {
+					font-size: 1.2em;
+				}
+				.intro2 {
+					font-size: 1em;
+				}
+				iframe {
+					width: 95%;
+					height: auto;
+				}
 			}
 		}
 	}
