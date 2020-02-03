@@ -85,6 +85,33 @@ namespace :youtube_api do
         Rails.logger.debug("Time : #{Time.now}, Schedule : #{schedule}")
     end
 
+    # プレイリストの一覧を取得する
+    task :playlist_hist => :environment do
+        DEVELOPER_KEY = Rails.application.secrets.youtube_api_key
+        CHANNELID = 'UCkIimWZ9gBJRamKF0rmPU8w'
+
+        service = Google::Apis::YoutubeV3::YouTubeService.new
+        service.key = DEVELOPER_KEY
+        opt = {
+            channel_id: CHANNELID
+        }
+        begin
+            playlist = service.list_playlists("snippet", opt)
+        rescue
+            playlist = nil
+        end
+
+        unless playlist.nil?
+            PlayList.delete_all
+            playlist.items.each do |item|
+                list_insert = PlayList.new
+                list_insert.list_id = item.id
+                list_insert.title = item.title
+                list_insert.description = item.description1
+                list_insert.save
+            end
+        end
+    end
 
 
     task :playlist => :environment do

@@ -13,10 +13,9 @@
                 <p><%= tweet.attrs[:full_text] %></p>
                 <div class="illust_img">
                     <% tweet.media.each do |itm| %>
-                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.user.name}", title: ""} do %>
-                           <img src=<%= "#{itm.media_url_https}" %> alt="TwitterImg">
+                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.id}", title: "#{tweet.user.name}"} do %>
+                            <img src=<%= "#{itm.media_url_https}" %> alt="TwitterImg">
                         <% end %>
-                        <%#= image_tag(itm.media_url_https) %>
                     <% end %>
                 </div>
             <% end %>
@@ -31,10 +30,9 @@
                 <p><%= tweet.attrs[:full_text] %></p>
                 <div class="illust_img">
                     <% tweet.media.each do |itm| %>
-                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.user.name}", title: ""} do %>
+                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.id}", title: "#{tweet.user.name}"} do %>
                            <img src=<%= "#{itm.media_url_https}" %> alt="TwitterImg">
                         <% end %>
-                        <%#= image_tag(itm.media_url_https) %>
                     <% end %>
                 </div>
             <% end %>
@@ -50,10 +48,9 @@
                 <p><%= tweet.attrs[:full_text] %></p>
                 <div class="illust_img">
                     <% tweet.media.each do |itm| %>
-                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.user.name}", title: ""} do %>
+                        <%= link_to "#{itm.media_url_https}", data: {lightbox: "#{tweet.id}", title: "#{tweet.user.name}"} do %>
                            <img src=<%= "#{itm.media_url_https}" %> alt="TwitterImg">
                         <% end %>
-                        <%#= image_tag(itm.media_url_https) %>
                     <% end %>
                 </div>
             <% end %>
