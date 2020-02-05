@@ -22,7 +22,3 @@
 set :output, 'log/crontab.log'
 ENV['RAILS_ENV'] ||= 'development'
 set :environment, ENV['RAILS_ENV']
-
-every 20.minutes do
-    rake "youtube_api:scheduler"
-end
