@@ -1,0 +1,37 @@
+<% provide(:title, "Special2") %>
+
+<%= render partial: "layouts/coment_ome" %>
+
+<div class="special_page">
+
+    <!--
+    <h2>寄せ書き</h2>
+    <div class="yose_img">
+        <%= image_tag('amamya50000_page1.jpg', :class => 'yose_main_img') %>
+        <%= image_tag('amamya50000_page2.jpg', :class => 'yose_main_img') %>
+    </div>
+
+    <div id="modal">
+        <%= link_to image_tag("pdf_icon.png", :class => 'pdf_icon'), {:controller => "static_pages",:action=>"downloadpdf"}, :target=>["_blank"], data:
+            { confirm: 'PDFをダウンロードします。',
+            verify: 'Amamya5',
+            verify_text: 'ダウンロードコード「Amamya5」を入力してください。',
+            cancel: 'キャンセル',
+            commit: 'ダウンロード'}, title: 'PDFダウンロード' %>
+    </div>
+    -->
+
+    <h2>Twitter投稿</h2>
+    <div id="twitter_tag">
+        <div id="result">
+            <div class="md">
+                <%= render partial: "layouts/illust_tweet", locals: { illust: @illust } %>
+            </div>
+            <div class="xs">
+                <%= render partial: "layouts/illust_tweet_xs", locals: { illust: @illust } %>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

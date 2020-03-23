@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/illust', to: 'static_pages#illust'
   get '/other', to: 'static_pages#other'
   get '/special', to: 'static_pages#special'
+  get '/special2', to: 'static_pages#special2'
   get '/downloadpdf/download', to: 'static_pages#downloadpdf'
 
   post '/ajax', to: 'static_pages#ajax'
