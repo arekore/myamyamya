@@ -42,6 +42,7 @@ class StaticPagesController < ApplicationController
 
   def special2
     @illust = special_tweet().to_a
+    #Rails.logger.debug(@illust)
   end
 
   def downloadpdf
@@ -94,10 +95,9 @@ class StaticPagesController < ApplicationController
           query,
           count: 50,
           result_type: "recent",
-          locale: "ja",
+          #locale: "ja",
           exclude: "retweets",
-          filter: "images",
-          filter: "safe",
+          filter: ["images","safe"],
           tweet_mode: "extended"
       )
       return result
