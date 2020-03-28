@@ -611,10 +611,12 @@ div.other_page {
 	font-family: "M PLUS Rounded 1c";
 	font-size: 1.5em;
 	text-align: center;
+	align-items: center;
 	color: #000;
 	max-width: 95%;
 	margin: auto;
 	padding: 20px 0;
+	position: relative;
 	.yose_img {
 		padding: 20px;
 		img {
@@ -623,9 +625,20 @@ div.other_page {
 			padding: 10px;
 		}
 	}
+	.yose_img2 {
+		img {
+			max-width: 45%;
+			padding: 10px;
+		}
+	}
 	.pdf_icon {
 		width: 60px;
 		height: auto;
+	}
+	.minecraft {
+		img.mine10_img {
+			width: 40%;
+		}
 	}
 	#modal.modal-body {
 		font-size: 1.5em;
@@ -634,9 +647,9 @@ div.other_page {
 	#twitter_tag {
 		h1 {
 			font-family: "M PLUS Rounded 1c";
-			font-size: 3em;
+			//font-size: 3em;
 			@media (max-width:480px) {
-				font-size: 2em;
+				//font-size: 2em;
 				margin-top: 20px;
 			}
 		}
@@ -690,6 +703,26 @@ div.other_page {
 			.xs {
 				display: none;
 			}
+		}
+	}
+	h1 {
+		min-width: 30%;
+		max-width: 50%;
+		padding: .5em .5em .5em 1em; /*上下左右の余白*/
+		background-color: #ffe6e6; /*背景色*/
+		border-bottom: solid .1em #ff5a5f; /*下線（線種 太さ 色）*/
+		border-left: solid .5em #ff5a5f; /*下線（線種 太さ 色）*/
+		#fanserver {
+			font-size: 1em;
+		}
+	}
+	@media (max-width:480px) {
+		h1 {
+			max-width: 70%;
+			font-size: inherit;
+		}
+		#fanserver {
+			font-size: 1em;
 		}
 	}
 }
