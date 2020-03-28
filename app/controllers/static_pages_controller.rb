@@ -40,7 +40,18 @@ class StaticPagesController < ApplicationController
   def special
   end
 
+  def special2
+    @illust = special_tweet().to_a
+  end
+
   def downloadpdf
+    file_name = "amamya50000.pdf"
+    filepath = Rails.root.join("public", file_name)
+    stat = File::stat(filepath)
+    send_file(filepath, :filename => file_name, :length => stat.size)
+  end
+
+  def downloadpdf2
     file_name = "amamya50000.pdf"
     filepath = Rails.root.join("public", file_name)
     stat = File::stat(filepath)
@@ -50,6 +61,28 @@ class StaticPagesController < ApplicationController
   private
     def ajax
       query = "#絵こころ" #検索文字列
+
+      sleep(1)
+      client = Twitter::REST::Client.new(
+          consumer_key: CONSUMER_KEY,
+          consumer_secret: SECRET_KEY,
+      )
+      since_id = nil
+      result = client.search(
+          query,
+          count: 50,
+          result_type: "recent",
+          locale: "ja",
+          exclude: "retweets",
+          filter: "images",
+          filter: "safe",
+          tweet_mode: "extended"
+      )
+      return result
+    end
+
+    def special_tweet
+      query = "#10万人記念天宮こころ" #検索文字列
 
       sleep(1)
       client = Twitter::REST::Client.new(

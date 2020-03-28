@@ -196,14 +196,6 @@ footer {
 			width: 100%;
 		}
 	}
-	.special_link {
-		margin-top: 15px;
-		text-align: center;
-		width: 40%;
-		@media (max-width:480px) {
-			width: 100%;
-		}
-	}
 	@media (max-width:480px) {
 		h1 {
 			font-size: 2.5em;
@@ -223,24 +215,35 @@ footer {
 .top_contents {
 	margin: 20px auto;
 	text-align: center;
-	// アニメーション設定
-	animation-name:fade-in3;
-	animation-duration:2s; //アニメーション時間
-	animation-timing-function: ease-out; //アニメーションさせるイージング
-	animation-delay:1s; //アニメーション開始させる時間
-	animation-iteration-count:1; //繰り返し回数
-	animation-direction:normal; //往復処理をするかどうか
-	animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
-	// アニメーション
-	@keyframes fade-in3 {
-	  0% {opacity: 0; transform: translate3d(0,20px,0);}
-	  100% {opacity: 1; transform: translate3d(0,0,0);}
-	}
 	@media (max-width:480px) {
 		float: none;
 		width: 100%;
 		img {
 			width: 80%;
+		}
+	}
+	div.special_div {
+		font-size: 2em;
+		margin: 15px 0;
+		width: 100%;
+		span.link_txt {
+			display: inline-block;
+			transition: .3s;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			:hover {
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+		}
+		.illusted {
+			font-size: 0.8em;
+		}
+		img {
+			width: 100%;
+		}
+		@media (max-width:480px) {
+			width: 100%;
 		}
 	}
 	div.schedule {
@@ -608,10 +611,12 @@ div.other_page {
 	font-family: "M PLUS Rounded 1c";
 	font-size: 1.5em;
 	text-align: center;
+	align-items: center;
 	color: #000;
 	max-width: 95%;
 	margin: auto;
 	padding: 20px 0;
+	position: relative;
 	.yose_img {
 		padding: 20px;
 		img {
@@ -620,12 +625,104 @@ div.other_page {
 			padding: 10px;
 		}
 	}
+	.yose_img2 {
+		img {
+			max-width: 45%;
+			padding: 10px;
+		}
+	}
 	.pdf_icon {
 		width: 60px;
 		height: auto;
 	}
+	.minecraft {
+		img.mine10_img {
+			width: 40%;
+		}
+	}
 	#modal.modal-body {
 		font-size: 1.5em;
 		color: #000;
+	}
+	#twitter_tag {
+		h1 {
+			font-family: "M PLUS Rounded 1c";
+			//font-size: 3em;
+			@media (max-width:480px) {
+				//font-size: 2em;
+				margin-top: 20px;
+			}
+		}
+		.row {
+			align-items: baseline;
+		}
+		.illust_cell {
+			background-color: rgba(255,105,180,0.5);
+			border-radius: 10px;
+			margin: 5px;
+			max-width: 24%;
+			padding: 15px;
+			.tw_name {
+				margin: 0;
+			}
+			.illust_img {
+				:first-child {
+					max-height: 100%;
+					max-width: 100%;
+					object-fit: cover;
+					vertical-align: middle;
+					text-align: center;
+				}
+				:nth-child(n+2) {
+					max-width: 50%;
+					max-height: 50%;
+				}
+			}
+			@media (max-width:480px) {
+				max-width: 90%;
+				font-size: 0.8em;
+				margin: 15px auto;
+				.tw_text {
+					line-height: 1.5em;
+				}
+			}
+		}
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+		#result {
+			margin: auto;
+		}
+		@media (max-width:480px) {
+			.md {
+				display: none;
+			}
+		}
+		@media (min-width:781px) {
+			.xs {
+				display: none;
+			}
+		}
+	}
+	h1 {
+		min-width: 30%;
+		max-width: 50%;
+		padding: .5em .5em .5em 1em; /*上下左右の余白*/
+		background-color: #ffe6e6; /*背景色*/
+		border-bottom: solid .1em #ff5a5f; /*下線（線種 太さ 色）*/
+		border-left: solid .5em #ff5a5f; /*下線（線種 太さ 色）*/
+		#fanserver {
+			font-size: 1em;
+		}
+	}
+	@media (max-width:480px) {
+		h1 {
+			max-width: 70%;
+			font-size: inherit;
+		}
+		#fanserver {
+			font-size: 1em;
+		}
 	}
 }

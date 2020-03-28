@@ -4,11 +4,6 @@
     <h1>#絵こころ</h1>
     <p>Twitterアカウント名・IDからTwitterページへ、Tweet本文からTweet詳細へ、画像クリックで拡大表示できます。</p>
 
-    <%# Ajax更新ボタン %>
-    <%#= form_with url: "/ajax" do |f| %>
-        <%#= f.submit "更新", class: "btn btn-primary" %>
-    <%# end %>
-
     <div id="result">
         <div class="md">
             <%= render partial: "layouts/illust_tweet", locals: { illust: @illust } %>
